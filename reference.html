@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta http-equiv='Content-type' content='text/html; charset=utf-8'>
+		<title>Infamous To-Do App</title>
+	</head>
+	<body>
+		<h1>Infamous To-Do App - Reference</h1>
+		<div id="container"></div>
+		<p>Normal javascript syntax</p>
+		<code>
+			var message = 
+			React.DOM.div({className: 'hello', onClick: someFunc}, [
+				React.DOM.span(null, ['Hello Word'])
+			]);
+		</code>
+		<p>JXS Transformer</p>
+		<code>
+			var message = 
+			<div class="hello" onClick={someFunc}>
+				<span>Hello World</span>
+			</div>
+		</code>
+		<div id="mount-point"></div>
+		<script src="vendor/react-0.12.2.js"></script>
+		<script src="vendor/JSXTransformer-0.12.2.js"></script>
+		<script type="text/jsx">
+		//debugger;
+		var message1 = 
+			React.DOM.div({className: 'hello', onClick: someFunc}, [
+				React.DOM.span(null, ['Hello Word 1'])
+			]);
+
+		var message2 = 
+			<div class="hello" onClick={someFunc}>
+				<span>Hello from React</span>
+			</div>;
+
+		function someFunc() {
+			console.log('hey');
+		}
+
+		React.render(message1, document.getElementById('mount-point'));
+		React.render(message2, document.getElementById('mount-point'));
+
+		//Component
+		var MyComponent = React.createClass({
+			render: function(){
+				return (
+					<h1>Hello, {this.props.name}, from Components!</h1>
+				);
+			}
+		});
+
+		//Render Component
+		React.render(<MyComponent name="Gonzalo"/>, document.getElementById('mount-point'));
+			
+		</script>
+	</body>
+</html>

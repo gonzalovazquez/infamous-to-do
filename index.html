@@ -7,19 +7,11 @@
 	<body>
 		<h1>Infamous To-Do App</h1>
 		<div id="container"></div>
-		<script src="http://fb.me/react-0.12.2.js"></script>
-		<script>
-		var message = 
-			React.DOM.div({className: 'hello', onClick: someFunc}, [
-				React.DOM.span(null, ['Hello Word'])
-			]);
+	
+		<script src="vendor/react-0.12.2.js"></script>
+		<script src="vendor/JSXTransformer-0.12.2.js"></script>
+		<script type="text/jsx">
 
-		function someFunc () {
-			console.log('hey');
-		}
-
-		React.renderComponent(message, document.body);
-			
 		</script>
 	</body>
 </html>
