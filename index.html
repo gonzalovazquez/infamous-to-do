@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta http-equiv='Content-type' content='text/html; charset=utf-8'>
+		<title>Infamous To-Do App</title>
+	</head>
+	<body>
+		<h1>Infamous To-Do App</h1>
+		<div id="container"></div>
+		<script src="http://fb.me/react-0.12.2.js"></script>
+		<script>
+		var message = 
+			React.DOM.div({className: 'hello', onClick: someFunc}, [
+				React.DOM.span(null, ['Hello Word'])
+			]);
+
+		function someFunc () {
+			console.log('hey');
+		}
+
+		React.renderComponent(message, document.body);
+			
+		</script>
+	</body>
+</html>
